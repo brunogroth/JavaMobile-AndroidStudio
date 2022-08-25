@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Instância
+        //Instancia
         buttomCreateGift = findViewById(R.id.button_add);
 
         //Listener
