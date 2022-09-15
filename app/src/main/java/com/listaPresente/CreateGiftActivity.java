@@ -11,6 +11,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.listaPresente.model.Gift;
+import com.listaPresente.repository.GiftRepository;
 
 public class CreateGiftActivity extends AppCompatActivity {
 
@@ -54,6 +55,9 @@ public class CreateGiftActivity extends AppCompatActivity {
         String description = inputEditTextDescription.getText().toString();
 
         Gift gift = new Gift(name, giftName, description);
+        GiftRepository.getInstance().save(gift);
+
+    onBackPressed();
     }
 }
 
